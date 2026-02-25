@@ -92,6 +92,7 @@ export const templates: Record<string, TemplateSet> = {
     },
   },
 
+  // ✅ FIX: you MUST have a comma before the next template block
   booking_confirmation: {
     email: {
       subject: 'Booking Confirmed! 📅',
@@ -246,22 +247,22 @@ export const templates: Record<string, TemplateSet> = {
     },
   },
 
-
   account_update: {
     email: {
-      subject: "Login Successful",
-      body: "Hello,\n\nYou have logged in successfully.\n\nIf this wasn't you, contact support immediately."
+      subject: 'Login Successful',
+      body:
+        "Hello,\n\nYou have logged in successfully.\n\nIf this wasn't you, contact support immediately.",
     },
     sms: {
-    body: "Login successful. If this wasn't you, contact support."
+      body: "Login successful. If this wasn't you, contact support.",
     },
     in_app: {
-      subject: "Login Successful",
-      body: "You logged in successfully."
-    }
-    push:{
-        subject: "User Just Logged In",
-        body: " Hello you just logged in to your account",
-   },
+      subject: 'Login Successful',
+      body: 'You logged in successfully.',
+    },
+    push: {
+      subject: 'User Just Logged In',
+      body: 'Hello you just logged in to your account',
+    },
   },
 };
