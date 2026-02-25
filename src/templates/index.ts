@@ -262,6 +262,6 @@ export const templates: Record<string, TemplateSet> = {
     push:{
         subject: "User Just Logged In",
         body: " Hello you just logged in to your account",
-   }
+   },
   },
 };
