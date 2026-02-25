@@ -4,16 +4,13 @@ try {
   const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
 
   if (!serviceAccountJson) {
-    throw new Error('FIREBASE_SERVICE_ACCOUNT_JSON not found in environment variables');
+    throw new Error('FIREBASE_SERVICE_ACCOUNT_JSON not found');
   }
 
   const serviceAccount = JSON.parse(serviceAccountJson);
 
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL:
-      process.env.FIREBASE_DATABASE_URL ||
-      https://${serviceAccount.project_id}.firebaseio.com,
   });
 
   console.log('✅ Firebase Admin initialized successfully');
